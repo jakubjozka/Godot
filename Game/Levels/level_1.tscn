@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://wfkuah0rgrs1"]
+
+[ext_resource type="Texture2D" uid="uid://bq8b6h8jsjy6l" path="res://pixil-frame-0 (10).png" id="1_iprc7"]
+[ext_resource type="PackedScene" uid="uid://ct7dkr46a4ra4" path="res://Player/Player.tscn" id="2_fvt0g"]
+[ext_resource type="PackedScene" uid="uid://d3btkktk4biji" path="res://cube/cube.tscn" id="3_oc71f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj7af"]
+texture = ExtResource("1_iprc7")
+texture_region_size = Vector2i(30, 30)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.5, -7.5, 7.5, -7.5, 7.5, 7.5, -7.5, 7.5)
+
+[sub_resource type="TileSet" id="TileSet_h5wvr"]
+tile_size = Vector2i(30, 30)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_sj7af")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx7ei"]
+size = Vector2(958, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_na7an"]
+size = Vector2(20, 275)
+
+[node name="Level 1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_h5wvr")
+format = 2
+layer_0/tile_data = PackedInt32Array(1114128, 3, 0, 1114129, 3, 0, 1114130, 3, 0, 1114131, 3, 0, 1114132, 3, 0, 1114133, 3, 0, 1114134, 3, 0, 1114135, 3, 0, 1114136, 3, 0, 1114137, 3, 0, 1114138, 3, 0, 1114139, 3, 0, 1114140, 3, 0, 1114141, 3, 0, 1114142, 3, 0, 1114143, 3, 0, 1114127, 3, 0, 1114126, 3, 0, 1114125, 3, 0, 1114124, 3, 0, 1114123, 3, 0, 1114122, 3, 0, 1114121, 3, 0, 1114120, 3, 0, 1114119, 3, 0, 1114118, 3, 0, 1114117, 3, 0, 1114116, 3, 0, 1114115, 3, 0, 1114114, 3, 0, 1114113, 3, 0, 1114112, 3, 0, 1048607, 3, 0, 983071, 3, 0, 917535, 3, 0, 851999, 3, 0, 786463, 3, 0, 720927, 3, 0, 655391, 3, 0, 589855, 3, 0, 524319, 3, 0, 1048576, 3, 0, 983040, 3, 0, 917504, 3, 0, 851968, 3, 0, 589824, 3, 0, 655360, 3, 0, 720896, 3, 0, 786432, 3, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_fvt0g")]
+position = Vector2(729, 494)
+collision_mask = 63
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(566, 528)
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-84, -6)
+shape = SubResource("RectangleShape2D_nx7ei")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(374, -150)
+shape = SubResource("RectangleShape2D_na7an")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-546, -130)
+shape = SubResource("RectangleShape2D_na7an")
+
+[node name="cube" parent="." instance=ExtResource("3_oc71f")]
+position = Vector2(551, 479)
+
+[node name="cube2" parent="." instance=ExtResource("3_oc71f")]
+position = Vector2(337, 484)
