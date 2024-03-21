@@ -1,0 +1,166 @@
+[gd_scene load_steps=24 format=3 uid="uid://chskk3bmfcq51"]
+
+[ext_resource type="FontFile" uid="uid://dh4bupaduuqu5" path="res://Kenney Mini Square Mono.ttf" id="1_dxblh"]
+[ext_resource type="Texture2D" uid="uid://d0k78wre4m24b" path="res://BG/pixil-frame-0 (24).png" id="1_txfls"]
+[ext_resource type="PackedScene" uid="uid://ct7dkr46a4ra4" path="res://Player/Player.tscn" id="2_0vwrh"]
+[ext_resource type="Texture2D" uid="uid://dimgc64765d8x" path="res://BG/pixil-frame-0 (32).png" id="2_kylie"]
+[ext_resource type="Texture2D" uid="uid://d3jlcj0lndohh" path="res://BG/pixil-frame-0 (23).png" id="2_xu4oh"]
+[ext_resource type="PackedScene" uid="uid://d3btkktk4biji" path="res://cube/cube.tscn" id="3_54fjn"]
+[ext_resource type="Texture2D" uid="uid://btcsfsuskop24" path="res://BG/pixil-frame-0 (22).png" id="3_gjjlc"]
+[ext_resource type="Texture2D" uid="uid://bp2u53f4qmft1" path="res://BG/pixil-frame-0 (33).png" id="3_kdwdq"]
+[ext_resource type="PackedScene" uid="uid://noewr0vnekx4" path="res://Exit/area_2d.tscn" id="4_nlldu"]
+[ext_resource type="Texture2D" uid="uid://bmgg81qi1wd2f" path="res://BG/pixil-frame-0 (27).png" id="4_y80st"]
+[ext_resource type="Texture2D" uid="uid://id6u8yb87pp3" path="res://BG/pixil-frame-0 (26).png" id="5_px1nu"]
+[ext_resource type="Texture2D" uid="uid://du48l6oy0eyj1" path="res://BG/pixil-frame-0 (25).png" id="6_apbwe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hynbx"]
+texture = ExtResource("1_txfls")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqa6g"]
+texture = ExtResource("2_xu4oh")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pmirx"]
+texture = ExtResource("3_gjjlc")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m84yr"]
+texture = ExtResource("4_y80st")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xa0r"]
+texture = ExtResource("5_px1nu")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_la4to"]
+texture = ExtResource("6_apbwe")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_0nuox"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_hynbx")
+sources/4 = SubResource("TileSetAtlasSource_bqa6g")
+sources/5 = SubResource("TileSetAtlasSource_pmirx")
+sources/6 = SubResource("TileSetAtlasSource_m84yr")
+sources/7 = SubResource("TileSetAtlasSource_7xa0r")
+sources/8 = SubResource("TileSetAtlasSource_la4to")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76erc"]
+size = Vector2(585, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcugp"]
+size = Vector2(266, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f28vq"]
+size = Vector2(70.5, 349.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6w2y"]
+size = Vector2(110, 254)
+
+[node name="Level 2" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 281.0
+offset_top = 265.0
+offset_right = 369.0
+offset_bottom = 289.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_dxblh")
+text = "Pick UP
+"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 286.0
+offset_top = 256.0
+offset_right = 350.0
+offset_bottom = 276.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_dxblh")
+text = "PLACE"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 345.0
+offset_top = 256.0
+offset_right = 405.0
+offset_bottom = 276.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("1_dxblh")
+text = "THROW"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Pixil-frame-0(32)" type="Sprite2D" parent="Node2D"]
+position = Vector2(301, 241)
+scale = Vector2(3, 3)
+texture = ExtResource("2_kylie")
+
+[node name="Pixil-frame-0(33)" type="Sprite2D" parent="Node2D"]
+position = Vector2(360, 241)
+scale = Vector2(3, 3)
+texture = ExtResource("3_kdwdq")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+scale = Vector2(3.75, 3.75)
+tile_set = SubResource("TileSet_0nuox")
+format = 2
+layer_0/tile_data = PackedInt32Array(917508, 4, 0, 917509, 3, 0, 917510, 3, 0, 917511, 4, 0, 917512, 4, 0, 917513, 3, 0, 917514, 3, 0, 917515, 3, 0, 917516, 5, 0, 917517, 3, 0, 917518, 3, 0, 917519, 3, 0, 917520, 4, 0, 917521, 3, 0, 917522, 3, 0, 917523, 3, 0, 917524, 5, 0, 851988, 3, 0, 786452, 4, 0, 720916, 3, 0, 655380, 5, 0, 655381, 3, 0, 655382, 3, 0, 655383, 5, 0, 655384, 3, 0, 655385, 4, 0, 655386, 3, 0, 655387, 5, 0, 589851, 3, 0, 524315, 4, 0, 458779, 3, 0, 393243, 4, 0, 327707, 3, 0, 262171, 4, 0, 196635, 3, 0, 131099, 5, 0, 131098, 3, 0, 131097, 3, 0, 131096, 5, 0, 131095, 3, 0, 131094, 3, 0, 131093, 3, 0, 131092, 3, 0, 131091, 4, 0, 131090, 3, 0, 131089, 5, 0, 131088, 3, 0, 131087, 3, 0, 131086, 4, 0, 196622, 3, 0, 262158, 5, 0, 262157, 5, 0, 262156, 3, 0, 262155, 4, 0, 262154, 3, 0, 262153, 4, 0, 262152, 5, 0, 262151, 3, 0, 262150, 3, 0, 262149, 3, 0, 262148, 4, 0, 327684, 3, 0, 393220, 4, 0, 458756, 3, 0, 524292, 5, 0, 589828, 3, 0, 655364, 4, 0, 720900, 3, 0, 786436, 5, 0, 851972, 3, 0, 851976, 8, 0, 851981, 8, 0, 851986, 8, 0, 589847, 8, 0, 524311, 7, 0, 458775, 7, 0, 393239, 7, 0, 327703, 7, 0, 262167, 7, 0, 786450, 7, 0, 720914, 7, 0, 655378, 7, 0, 589842, 7, 0, 524306, 7, 0, 458770, 7, 0, 393234, 7, 0, 327698, 7, 0, 262162, 7, 0, 786445, 7, 0, 720909, 7, 0, 655373, 7, 0, 589837, 7, 0, 524301, 7, 0, 458765, 7, 0, 393229, 7, 0, 786440, 7, 0, 720904, 7, 0, 655368, 7, 0, 589832, 7, 0, 524296, 7, 0, 458760, 7, 0, 393224, 7, 0, 327688, 6, 0, 327693, 6, 0, 196626, 6, 0, 196631, 6, 0)
+
+[node name="JYP" parent="." instance=ExtResource("2_0vwrh")]
+position = Vector2(280, 404)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(411.5, 449.5)
+shape = SubResource("RectangleShape2D_76erc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(733, 361.5)
+shape = SubResource("RectangleShape2D_dcugp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(115, 260.25)
+shape = SubResource("RectangleShape2D_f28vq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(865, 182)
+shape = SubResource("RectangleShape2D_b6w2y")
+
+[node name="cube" parent="." instance=ExtResource("3_54fjn")]
+position = Vector2(452, 404)
+
+[node name="Exit" parent="." instance=ExtResource("4_nlldu")]
+position = Vector2(755, 269)
